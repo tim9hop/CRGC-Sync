@@ -58,9 +58,9 @@ sourceCalendars = [
 
 const sourceCalendars = [
   {
-  sourceCalendarName: "Calendar x",                    //Required
-  sourceURL: "http://CalXURL.ics",                     //Required
-  targetCalendarName: "Target Calendar",               //Required
+  sourceCalendarName: "Clandon Regis",                    //Required
+  sourceURL: "https://calendar.google.com/calendar/embed?src=clandonregisgolftest%40gmail.com&ctz=Europe%2FLondon",                     //Required
+  targetCalendarName: "CFGC IG Test 1 - Seniors",               //Required
   color: 5
   },
   {
