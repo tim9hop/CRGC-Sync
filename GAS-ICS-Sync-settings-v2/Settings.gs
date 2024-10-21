@@ -94,7 +94,13 @@ const filters = {
                       comparison: "regex",
                       criterias: ["^Pending:", "cancelled"]
                     },
-  'onlyMeetings': {
+  'onlyConfirmed': {
+                      parameter: "summary",       // Include events whose summary starts with "Seniors".
+                      type: "include",
+                      comparison: "equals",
+                      criterias: ["^Seniors:"]
+                    },
+   'onlyMeetings': {
                     parameter: "categories",    // Include only events categorized as "Meetings".
                     type: "include",
                     comparison: "equals",
