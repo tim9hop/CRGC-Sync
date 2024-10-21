@@ -63,13 +63,6 @@ const sourceCalendars = [
   targetCalendarName: "CFGC IG Test 1 - Seniors",               //Required
   color: 5
   },
-  {
-  sourceCalendarName: "Calendar y",                    //Required
-  sourceURL: "http://CalYURL.ics",                     //Required
-  targetCalendarName: "Target Calendar",               //Required
-  color: 5,
-  addCalToTitle: false
-  }
 ];
 
 /*
