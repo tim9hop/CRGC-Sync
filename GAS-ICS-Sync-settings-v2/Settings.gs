@@ -60,7 +60,7 @@ const sourceCalendars = [
   {
   sourceCalendarName: "Clandon Regis",                    //Required
   sourceURL: "https://calendar.google.com/calendar/embed?src=clandonregisgolftest%40gmail.com&ctz=Europe%2FLondon",                     //Required
-  targetCalendarName: "CFGC IG Test 1 - Seniors",               //Required
+  targetCalendarName: "CRGC IG Test 1 - Seniors",               //Required
   color: 5
   },
 ];
