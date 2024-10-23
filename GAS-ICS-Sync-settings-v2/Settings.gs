@@ -105,7 +105,7 @@ const filters = {
                         comparison: ">",
                         offset: 0
                       },
-  'x+14': {
+  'x+28': {
             parameter: "dtstart",       // Exclude events starting more than 28 days from now.
             type: "exclude",
             comparison: ">",
