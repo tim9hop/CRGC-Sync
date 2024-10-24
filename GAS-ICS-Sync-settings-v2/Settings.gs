@@ -80,8 +80,7 @@ Define each filter with the following structure and add them to the filters obje
               offset: number              // (Optional) For date/time properties, specify an offset in days.
             }
 */
-const filters = [
-{
+const filters = {
   'onlyConfirmed': {
                       parameter: "summary",       // Exclude events whose summary starts with "Pending:" or contains "cancelled".
                       type: "exclude",
@@ -112,4 +111,4 @@ const filters = [
             comparison: ">",
             offset: 28
           }
-];
+};
