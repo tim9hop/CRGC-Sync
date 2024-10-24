@@ -61,10 +61,10 @@ const sourceCalendars = [
   sourceCalendarName: "Clandon Regis",                    //Required
   sourceURL: "https://calendar.google.com/calendar/ical/clandonregisgolftest%40gmail.com/private-6a52a516459dccff17367552576ea517/basic.ics",                     //Required
   targetCalendarName: "CRGC IG Test 1 - Seniors",               //Required
-  color: 5
-  },
+  color: 5,
+  filters: ['onlyConfirmed']
+  }
 ];
-
 /*
 *=========================================
 *             Event Filters
@@ -82,33 +82,10 @@ Define each filter with the following structure and add them to the filters obje
 */
 const filters = {
   'onlyConfirmed': {
-                      parameter: "summary",       // Exclude events whose summary starts with "Pending:" or contains "cancelled".
-                      type: "exclude",
-                      comparison: "regex",
-                      criterias: ["^Pending:", "cancelled"]
-                    },
-  'onlyConfirmed': {
-                      parameter: "summary", // Include events whose summary starts with "Seniors'".
+                      parameter: "summary", // Include events whose summary starts with "Seniors".
                       type: "include",
                       comparison: "begins with",
-                      criterias: ["Seniors'"]
-                  },
-   'onlyMeetings': {
-                    parameter: "categories",    // Include only events categorized as "Meetings".
-                    type: "include",
-                    comparison: "equals",
-                    criterias: ["Meetings"]
-                  },
-  'onlyFutureEvents': {
-                        parameter: "dtend",       // Reproduce the deprecated onlyFutureEvents behaviour.
-                        type: "include",
-                        comparison: ">",
-                        offset: 0
-                      },
-  'x+28': {
-            parameter: "dtstart",       // Exclude events starting more than 28 days from now.
-            type: "exclude",
-            comparison: ">",
-            offset: 28
-          }
+                      criterias: ["Seniors"]
+                  }     
+
 };
