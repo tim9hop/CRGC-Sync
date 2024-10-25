@@ -59,10 +59,24 @@ sourceCalendars = [
 const sourceCalendars = [
   {
   sourceCalendarName: "Clandon Regis",                    //Required
-  sourceURL: "https://calendar.google.com/calendar/ical/clandonregisgolftest%40gmail.com/private-6a52a516459dccff17367552576ea517/basic.ics",                     //Required
+  sourceURL: "https://calendar.google.com/calendar/ical/8q4fle42kap7tl26ub19k6sd9vffgsf7%40import.calendar.google.com/public/basic.ics",                     //Required
   targetCalendarName: "CRGC IG Test 1 - Seniors",               //Required
   color: 5,
-  filters: ['onlyConfirmed']
+  filters: ['onlyConfirmed-Seniors']
+  },
+  {
+  sourceCalendarName: "Clandon Regis",                    //Required
+  sourceURL: "https://calendar.google.com/calendar/ical/8q4fle42kap7tl26ub19k6sd9vffgsf7%40import.calendar.google.com/public/basic.ics",                     //Required
+  targetCalendarName: "CRGC IG Test 1 - Ladies",               //Required
+  color: 6,
+  filters: ['onlyConfirmed-Ladies']
+  },
+  {
+  sourceCalendarName: "Clandon Regis",                    //Required
+  sourceURL: "https://calendar.google.com/calendar/ical/8q4fle42kap7tl26ub19k6sd9vffgsf7%40import.calendar.google.com/public/basic.ics",                     //Required
+  targetCalendarName: "CRGC IG Test 1 - Men",               //Required
+  color: 7,
+  filters: ['onlyConfirmed-Men']
   }
 ];
 /*
@@ -81,11 +95,22 @@ Define each filter with the following structure and add them to the filters obje
             }
 */
 const filters = {
-  'onlyConfirmed': {
+  'onlyConfirmed-Seniors': {
                       parameter: "summary", // Include events whose summary starts with "Seniors".
                       type: "include",
                       comparison: "begins with",
                       criterias: ["Seniors"]
-                  }     
-
+                  },
+  'onlyConfirmed-Ladies': {
+                      parameter: "summary", // Include events whose summary starts with "Ladies".
+                      type: "include",
+                      comparison: "begins with",
+                      criterias: ["Ladies"]
+                  }, 
+  'onlyConfirmed-Men': {
+                      parameter: "summary", // Include events whose summary starts with "Men".
+                      type: "include",
+                      comparison: "begins with",
+                      criterias: ["Men"]
+                  }             
 };
