@@ -58,20 +58,27 @@ sourceCalendars = [
 
 const sourceCalendars = [
   {
-  sourceCalendarName: "Calendar x",                    //Required
-  sourceURL: "http://CalXURL.ics",                     //Required
-  targetCalendarName: "Target Calendar",               //Required
-  color: 5
+  sourceCalendarName: "Clandon Regis",                    //Required
+  sourceURL: "https://calendar.google.com/calendar/ical/8q4fle42kap7tl26ub19k6sd9vffgsf7%40import.calendar.google.com/public/basic.ics",                     //Required
+  targetCalendarName: "CRGC IG Test 1 - Seniors",               //Required
+  color: 5,
+  filters: ['onlyConfirmed-Seniors']
   },
   {
-  sourceCalendarName: "Calendar y",                    //Required
-  sourceURL: "http://CalYURL.ics",                     //Required
-  targetCalendarName: "Target Calendar",               //Required
-  color: 5,
-  addCalToTitle: false
+  sourceCalendarName: "Clandon Regis",                    //Required
+  sourceURL: "https://calendar.google.com/calendar/ical/8q4fle42kap7tl26ub19k6sd9vffgsf7%40import.calendar.google.com/public/basic.ics",                     //Required
+  targetCalendarName: "CRGC IG Test 1 - Ladies",               //Required
+  color: 6,
+  filters: ['onlyConfirmed-Ladies']
+  },
+  {
+  sourceCalendarName: "Clandon Regis",                    //Required
+  sourceURL: "https://calendar.google.com/calendar/ical/8q4fle42kap7tl26ub19k6sd9vffgsf7%40import.calendar.google.com/public/basic.ics",                     //Required
+  targetCalendarName: "CRGC IG Test 1 - Men",               //Required
+  color: 7,
+  filters: ['onlyConfirmed-Men']
   }
 ];
-
 /*
 *=========================================
 *             Event Filters
@@ -88,28 +95,22 @@ Define each filter with the following structure and add them to the filters obje
             }
 */
 const filters = {
-  'onlyConfirmed': {
-                      parameter: "summary",       // Exclude events whose summary starts with "Pending:" or contains "cancelled".
-                      type: "exclude",
-                      comparison: "regex",
-                      criterias: ["^Pending:", "cancelled"]
-                    },
-  'onlyMeetings': {
-                    parameter: "categories",    // Include only events categorized as "Meetings".
-                    type: "include",
-                    comparison: "equals",
-                    criterias: ["Meetings"]
+  'onlyConfirmed-Seniors': {
+                      parameter: "summary", // Include events whose summary starts with "Seniors".
+                      type: "include",
+                      comparison: "begins with",
+                      criterias: ["Seniors"]
                   },
-  'onlyFutureEvents': {
-                        parameter: "dtend",       // Reproduce the deprecated onlyFutureEvents behaviour.
-                        type: "include",
-                        comparison: ">",
-                        offset: 0
-                      },
-  'x+14': {
-            parameter: "dtstart",       // Exclude events starting more than 14 days from now.
-            type: "exclude",
-            comparison: ">",
-            offset: 14
-          }
+  'onlyConfirmed-Ladies': {
+                      parameter: "summary", // Include events whose summary starts with "Ladies".
+                      type: "include",
+                      comparison: "begins with",
+                      criterias: ["Ladies"]
+                  }, 
+  'onlyConfirmed-Men': {
+                      parameter: "summary", // Include events whose summary starts with "Men".
+                      type: "include",
+                      comparison: "begins with",
+                      criterias: ["Men"]
+                  }             
 };
