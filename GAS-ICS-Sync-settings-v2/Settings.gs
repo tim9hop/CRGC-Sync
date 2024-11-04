@@ -77,6 +77,34 @@ const sourceCalendars = [
   targetCalendarName: "CRGC IG Test 1 - Men",               //Required
   color: 7,
   filters: ['onlyConfirmed-Men']
+  },
+  {
+  sourceCalendarName: "Clandon Regis",                    //Required
+  sourceURL: "https://calendar.google.com/calendar/ical/8q4fle42kap7tl26ub19k6sd9vffgsf7%40import.calendar.google.com/public/basic.ics",                     //Required
+  targetCalendarName: "CRGC IG Test 1 - Mixed",               //Required
+  color: 8,
+  filters: ['onlyConfirmed-Mixed']
+  },
+  {
+  sourceCalendarName: "Clandon Regis",                    //Required
+  sourceURL: "https://calendar.google.com/calendar/ical/8q4fle42kap7tl26ub19k6sd9vffgsf7%40import.calendar.google.com/public/basic.ics",                     //Required
+  targetCalendarName: "CRGC IG Test 1 - General",               //Required
+  color: 8,
+  filters: ['onlyConfirmed-General']
+  },
+  {
+  sourceCalendarName: "Clandon Regis",                    //Required
+  sourceURL: "https://calendar.google.com/calendar/ical/8q4fle42kap7tl26ub19k6sd9vffgsf7%40import.calendar.google.com/public/basic.ics",                     //Required
+  targetCalendarName: "CRGC IG Test 1 - Social",               //Required
+  color: 8,
+  filters: ['onlyConfirmed-Social']
+  },
+  {
+  sourceCalendarName: "Clandon Regis",                    //Required
+  sourceURL: "https://calendar.google.com/calendar/ical/8q4fle42kap7tl26ub19k6sd9vffgsf7%40import.calendar.google.com/public/basic.ics",                     //Required
+  targetCalendarName: "CRGC IG Test 1 - External",               //Required
+  color: 8,
+  filters: ['onlyConfirmed-External']
   }
 ];
 /*
@@ -112,5 +140,29 @@ const filters = {
                       type: "include",
                       comparison: "begins with",
                       criterias: ["Men"]
-                  }             
+                  }, 
+  'onlyConfirmed-Mixed':{
+                      parameter: "summary", // Include events whose summary starts with "Mixed".
+                      type: "include",
+                      comparison: "begins with",
+                      criterias: ["Mixed"]
+                  },    
+  'onlyConfirmed-General':{
+                      parameter: "summary", // Include events whose summary starts with "General".
+                      type: "include",
+                      comparison: "begins with",
+                      criterias: ["General"]
+                  },   
+  'onlyConfirmed-Social':{
+                      parameter: "summary", // Include events whose summary starts with "Social".
+                      type: "include",
+                      comparison: "begins with",
+                      criterias: ["Social"]
+                  }, 
+  'onlyConfirmed-External':{
+                      parameter: "summary", // Include events whose summary starts with "External".
+                      type: "include",
+                      comparison: "begins with",
+                      criterias: ["External"]
+                  }                 
 };
