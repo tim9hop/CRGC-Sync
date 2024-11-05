@@ -154,10 +154,10 @@ const filters = {
                       criterias: ["General"]
                   },   
   'onlyConfirmed-Social':{
-                      parameter: "summary", // Include events whose summary starts with "Social".
+                      parameter: "summary", // Include events whose summary starts with "*".
                       type: "include",
                       comparison: "begins with",
-                      criterias: ["Social"]
+                      criterias: ["\\*"]
                   }, 
   'onlyConfirmed-External':{
                       parameter: "summary", // Include events whose summary starts with "External".
