@@ -133,7 +133,7 @@ const filters = {
                       parameter: "summary", // Include events whose summary starts with "Ladies".
                       type: "include",
                       comparison: "begins with",
-                      criterias: ["Ladies"]
+                      criterias: ["Ladies", "ladies"]
                   }, 
   'onlyConfirmed-Men': {
                       parameter: "summary", // Include events whose summary starts with "Men".
@@ -154,10 +154,10 @@ const filters = {
                       criterias: ["General"]
                   },   
   'onlyConfirmed-Social':{
-                      parameter: "summary", // Include events whose summary starts with "*".
+                      parameter: "summary", // Include events whose summary starts with "*" or "Social".
                       type: "include",
                       comparison: "begins with",
-                      criterias: ["\\*"]
+                      criterias: ["\\*", "Social"]
                   }, 
   'onlyConfirmed-External':{
                       parameter: "summary", // Include events whose summary starts with "External".
